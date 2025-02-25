@@ -1,0 +1,37 @@
+.loader {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 6px solid transparent;
+    border-top: 6px solid #19cec6;
+    border-right: 6px solid #1f2937;
+    animation: spin 1s linear infinite;
+    position: relative;
+    background: conic-gradient(from 0deg, #19cec6, #1f2937, #e5e7eb);
+    mask: radial-gradient(circle, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 1) 60%);
+}
+
+/* Pulsing glowing center dot */
+.loader::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: #19cec6;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 8px #19cec6;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.4; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 1; transform: translate(-50%, -50%) scale(1.3); }
+}
