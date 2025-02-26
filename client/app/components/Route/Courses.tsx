@@ -41,6 +41,51 @@ const Courses = () => {
                   No courses available at the moment.
                 </p>
               )}
+              {courses && courses.length > 0 ? (
+                courses.map((item: any, index: number) => (
+                  <CourseCard item={item} key={index} />
+                ))
+              ) : (
+                <p className="text-center col-span-full text-gray-600 dark:text-gray-300">
+                  No courses available at the moment.
+                </p>
+              )}
+              {courses && courses.length > 0 ? (
+                courses.map((item: any, index: number) => (
+                  <CourseCard item={item} key={index} />
+                ))
+              ) : (
+                <p className="text-center col-span-full text-gray-600 dark:text-gray-300">
+                  No courses available at the moment.
+                </p>
+              )}
+              {courses && courses.length > 0 ? (
+                courses.map((item: any, index: number) => (
+                  <CourseCard item={item} key={index} />
+                ))
+              ) : (
+                <p className="text-center col-span-full text-gray-600 dark:text-gray-300">
+                  No courses available at the moment.
+                </p>
+              )}
+              {courses && courses.length > 0 ? (
+                courses.map((item: any, index: number) => (
+                  <CourseCard item={item} key={index} />
+                ))
+              ) : (
+                <p className="text-center col-span-full text-gray-600 dark:text-gray-300">
+                  No courses available at the moment.
+                </p>
+              )}
+              {courses && courses.length > 0 ? (
+                courses.map((item: any, index: number) => (
+                  <CourseCard item={item} key={index} />
+                ))
+              ) : (
+                <p className="text-center col-span-full text-gray-600 dark:text-gray-300">
+                  No courses available at the moment.
+                </p>
+              )}
             </div>
           </>
         )}
