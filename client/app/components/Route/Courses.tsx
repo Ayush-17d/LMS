@@ -2,19 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useGetUsersAllCoursesQuery } from "@/redux/features/courses/coursesApi";
 import CourseCard from "../Admin/Course/CourseCard";
 
-// interface Course {
-//   _id: string;
-//   name: string;
-//   description: string;
-//   price: number;
-//   estimatedPrice?: number;
-//   thumbnail?: {
-//     url: string;
-//   };
-//   ratings?: number;
-//   purchased?: number;
-// }
-
 const Courses = () => {
   const { data, isLoading } = useGetUsersAllCoursesQuery({});
   const [courses, setCourses] = useState<any[]>([]);

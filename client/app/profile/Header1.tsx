@@ -185,7 +185,7 @@ const Header: FC<Props> = ({ activeItem, setOpen }) => {
   };
 
   return (
-    <div className="w-full sticky z-50 top-0">
+    <div className="w-full shadow-2xl sticky z-50 top-0">
       <div
         className={`${
           active

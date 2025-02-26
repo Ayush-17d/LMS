@@ -293,7 +293,7 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
   };
 
   return (
-    <div className="w-full bg-[#DDE6ED] dark:bg-[#27374D] z-50 sticky top-0 py-0">
+    <div className="w-full shadow-2xl bg-[#DDE6ED] dark:bg-[#27374D] z-50 sticky top-0 py-0">
       <div
         className={`${
           active

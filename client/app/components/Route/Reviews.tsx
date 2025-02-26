@@ -67,6 +67,7 @@ const Reviews: React.FC<Props> = () => {
             <ReviewCard item={review} key={index} />
           ))}
         </div>
+        <br /><br /><br />
       </div>
     </div>
   );
