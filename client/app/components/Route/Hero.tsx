@@ -65,7 +65,7 @@ const Hero: FC<Props> = () => {
           priority
         />
       </div>
-
+  
       {/* Right Side - Text & Form */}
       <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start justify-center px-6 lg:px-12 text-center lg:text-left space-y-8 z-10">
         {/* Heading Section */}

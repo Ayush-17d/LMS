@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useGetUsersAllCoursesQuery } from "@/redux/features/courses/coursesApi";
-import CourseCard from "../Admin/Course/CourseCard";
+import CourseCard from "../Course/CourseCard";
 
 const Courses = () => {
   const { data, isLoading } = useGetUsersAllCoursesQuery({});
@@ -59,36 +59,12 @@ const Courses = () => {
                   No courses available at the moment.
                 </p>
               )}
-              {courses && courses.length > 0 ? (
-                courses.map((item: any, index: number) => (
-                  <CourseCard item={item} key={index} />
-                ))
-              ) : (
-                <p className="text-center col-span-full text-gray-600 dark:text-gray-300">
-                  No courses available at the moment.
-                </p>
-              )}
-              {courses && courses.length > 0 ? (
-                courses.map((item: any, index: number) => (
-                  <CourseCard item={item} key={index} />
-                ))
-              ) : (
-                <p className="text-center col-span-full text-gray-600 dark:text-gray-300">
-                  No courses available at the moment.
-                </p>
-              )}
-              {courses && courses.length > 0 ? (
-                courses.map((item: any, index: number) => (
-                  <CourseCard item={item} key={index} />
-                ))
-              ) : (
-                <p className="text-center col-span-full text-gray-600 dark:text-gray-300">
-                  No courses available at the moment.
-                </p>
-              )}
             </div>
           </>
         )}
+        <button className="text-[clamp(1rem,1.5vw,2rem)] p-[clamp(0.5rem,1vw,2rem)] m-[clamp(0.25rem,0.5vw,1rem)] bg-blue-500 text-white rounded">
+          Explore More
+        </button>
       </div>
     </div>
   );

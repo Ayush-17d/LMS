@@ -317,6 +317,9 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
                 >
                   Teach With Us
                 </button>
+              //   <button className="text-[clamp(1rem,1.5vw,2rem)] p-[clamp(0.5rem,1vw,2rem)] m-[clamp(0.25rem,0.5vw,1rem)] bg-blue-500 text-white rounded">
+              //   Teach With Us
+              // </button>
               ) : 
              null}
             </div>

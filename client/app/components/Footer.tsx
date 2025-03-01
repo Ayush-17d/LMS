@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Twitter, Instagram, LinkedIn, YouTube } from "@mui/icons-material";
-
+import FitbitIcon from '@mui/icons-material/Fitbit';
 type Props = {};
 
 const Footer: React.FC<Props> = () => {
@@ -17,7 +17,7 @@ const Footer: React.FC<Props> = () => {
             >
               <div className="flex items-center space-x-2">
                 <span className="w-12 h-12 bg-indigo-500 dark:bg-indigo-600 rounded-full flex items-center justify-center text-white text-xl font-bold">
-                  L
+                  <FitbitIcon/>
                 </span>
                 <span className="text-2xl font-bold text-gray-900 dark:text-white hidden sm:inline">
                   LearnifyHub

@@ -17,7 +17,4 @@ courseRouter.get('/get-all-courses',isAuthenticated,authorizeRoles("admin"),getA
 courseRouter.post('/getVdoCipherOTP',generateVideoUrl)
 courseRouter.delete('/delete-course/:id',isAuthenticated,authorizeRoles("admin"),deleteCourse)
 
-
-
-
 export default courseRouter

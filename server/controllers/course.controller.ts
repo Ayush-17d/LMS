@@ -470,7 +470,6 @@ export const deleteCourse = CatchAsyncError(
     try {
       const courseId = req.params.id;
 
-      // Validate ObjectId format
       if (!mongoose.Types.ObjectId.isValid(courseId)) {
         return next(new ErrorHandler("Invalid course ID format", 400));
       }
