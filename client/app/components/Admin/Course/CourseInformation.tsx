@@ -872,7 +872,7 @@ const CourseInformation: FC<Props> = ({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           <div className="relative">
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 flex items-center" htmlFor="price">
-              <FaRupeeSign className="mr-2 text-blue-500" size={18} />
+              <FaRupeeSign className="mr-2 text-blue-500" size={14} />
               Course Price (INR)
             </label>
             <div className="relative">
@@ -901,7 +901,7 @@ const CourseInformation: FC<Props> = ({
 
           <div className="relative">
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 flex items-center" htmlFor="estimatedPrice">
-              <FaRupeeSign className="mr-2 text-blue-500" size={18} />
+              <FaRupeeSign className="mr-2 text-blue-500" size={14} />
               Original Price (INR){" "}
               <span className="text-gray-500 text-xs ml-1">(optional)</span>
             </label>

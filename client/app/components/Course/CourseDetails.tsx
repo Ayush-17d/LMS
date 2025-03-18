@@ -327,7 +327,7 @@ import Link from "next/link";
 import axios from "axios";
 import toast from "react-hot-toast";
 import CoursePlayer from "@/app/utils/CoursePlayer";
-import CourseContentList from "./CourseContentList";
+import CourseContentList from "../../utils/CourseContentList";
 import {
   FiCheck,
   FiBookOpen,

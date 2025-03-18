@@ -76,8 +76,8 @@ const ProfileInfo: FC<Props> = ({ user }) => {
     { isLoading: deleteLoading, isSuccess: deleteSuccess, error: deleteError },
   ] = useDeleteUserMutation(); // Add delete user mutation
   const [loadUser, setLoadUser] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  useLoadUserQuery(undefined, { skip: !loadUser });
+    const [isLoading, setIsLoading] = useState(false);
+    useLoadUserQuery(undefined, { skip: !loadUser });
   const [logout, setLogout] = useState(false);
   const [openSidebar, setOpenSidebar] = useState(false);
   const [imageName, setImageName] = useState<string | null>(null);
