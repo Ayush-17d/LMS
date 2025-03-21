@@ -288,7 +288,6 @@ const ProfileInfo: FC<Props> = ({ user }) => {
               onChange={(e) => setName(e.target.value)}
               placeholder="Full Name"
             />
-            <FiEdit3 className="absolute right-[12%] mt-2 md:top-11 text-gray-700 dark:text-white" />
             <input
               type="text"
               className="text-gray-700 dark:text-slate-300 cursor-not-allowed w-[80%] mt-2 mx-auto bg-gray-200 dark:bg-gray-700 border border-gray-400 rounded-md p-3 focus:outline-none transition"

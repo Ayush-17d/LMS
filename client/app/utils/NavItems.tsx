@@ -3,7 +3,7 @@ import Link from "next/link";
 import { AiFillHome } from "react-icons/ai";
 import Image from "next/image";
 import { MdLiveHelp, MdGavel } from "react-icons/md";
-import { FaInfoCircle} from "react-icons/fa";
+import { FaInfoCircle } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { MdGroupAdd } from "react-icons/md";
 import { useLogOutQuery } from "@/redux/features/auth/authApi";
@@ -11,7 +11,7 @@ import { redirect } from "next/navigation";
 import { signOut } from "next-auth/react";
 import avatar from "../../public/assests/download5.png";
 import { useSelector } from "react-redux";
-import { Dashboard,School,Lock,Memory} from  "@mui/icons-material"
+import { Dashboard, School, Lock, Memory } from "@mui/icons-material";
 
 export const NavItemsData = [
   { name: "Home", url: "/" },
@@ -186,7 +186,6 @@ const NavItems: React.FC<Props> = ({
                         ? "text-[crimson] dark:text-[#2bd576]"
                         : "text-black dark:text-white"
                     } flex items-center p-2 rounded-lg cursor-pointer gap-2`}
-                  
                   >
                     <School />
                     Enrolled Courses
@@ -200,7 +199,7 @@ const NavItems: React.FC<Props> = ({
                           : "text-black dark:text-white"
                       } flex items-center p-2 rounded-lg cursor-pointer gap-2`}
                     >
-                      <Lock  />
+                      <Lock />
                       Change Password
                     </li>
                   </Link>
@@ -212,13 +211,10 @@ const NavItems: React.FC<Props> = ({
                           : "text-black dark:text-white"
                       } flex items-center p-2 rounded-lg cursor-pointer gap-2`}
                     >
-                        <Memory />
+                      <Memory />
                       Device Info
                     </li>
                   </Link>
-
-            
-              
                 </ul>
               </div>
             </details>

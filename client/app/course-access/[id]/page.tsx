@@ -47,7 +47,6 @@ import Loader from "@/app/components/Loader/Loader";
 import { useLoadUserQuery } from "@/redux/features/api/apiSlice";
 import { redirect } from "next/navigation";
 import React, { use, useState, useEffect } from "react";
-import CertificateButton from "@/app/components/Certificate/CertificateButton";
 
 const Page = ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = use(params);
@@ -71,18 +70,8 @@ const Page = ({ params }: { params: Promise<{ id: string }> }) => {
   }
 
   return (
-    <div>
+    <div className="bg-white dark:bg-gray-800">
       <CourseAccessContent id={id} user={data.user} />
-
-      <div className="mt-0 flex justify-center">
-        <CertificateButton
-          studentName={data.user.name}
-          courseName={
-            data.user.courses.find((item: any) => item._id === id)?.name ||
-            "Your Course"
-          }
-        />
-      </div>
     </div>
   );
 };

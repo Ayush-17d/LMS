@@ -11,7 +11,6 @@ type Props = {
 };
 
 const CourseDeatilPage = ({ id }: Props) => {
-  // console.log(id);
 
   const [route, setRoute] = useState("Login");
   const [open, setOpen] = useState(false);

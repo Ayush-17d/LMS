@@ -222,7 +222,7 @@ const Header: FC<Props> = ({ activeItem, setOpen }) => {
               <div className="800px:hidden">
                 <HiOutlineMenuAlt3
                   size={25}
-                  className="cursor-pointer text-gray-900 dark:text-white hover:text-[#37a39a] transition-colors duration-200"
+                  className="cursor-pointer text-gray-900 dark:text-white transition-colors duration-200"
                   onClick={() => setOpenSidebar(!openSidebar)}
                 />
               </div>
@@ -234,7 +234,7 @@ const Header: FC<Props> = ({ activeItem, setOpen }) => {
                   alt="Profile Picture"
                   height={30}
                   width={30}
-                  className="w-[30px] h-[30px] rounded-full object-cover transition-all duration-200 hover:scale-110"
+                  className="w-[30px] h-[30px] rounded-full object-cover transition-all duration-200"
                   style={{
                     border: activeItem === 5 ? "2px solid #37a39a" : "none",
                     boxShadow:
