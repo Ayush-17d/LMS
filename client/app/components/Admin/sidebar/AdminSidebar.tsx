@@ -296,14 +296,6 @@ useEffect(() => {
                   closeSidebar={() => setIsCollapsed(true)}
                 />
                 <Item
-                  title="Courses Analytics 2"
-                  to="/analytics/courses2"
-                  icon={<FaChartBar />}
-                  selected={selected}
-                  setSelected={setSelected}
-                  closeSidebar={() => setIsCollapsed(true)}
-                />
-                <Item
                   title="User Analytics"
                   to="/analytics/users"
                   icon={<FaChartBar />}

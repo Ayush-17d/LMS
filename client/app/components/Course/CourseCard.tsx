@@ -5,6 +5,7 @@ import React, { FC, useState } from "react";
 import { MdOutlineSchool } from "react-icons/md";
 import { motion } from "framer-motion";
 import imagethumbnail from "../../../public/assests/charlesdeluvio-Lks7vei-eAg-unsplash.jpg";
+import { FiShare2 } from "react-icons/fi";
 
 type Props = {
   item: any;
@@ -80,8 +81,8 @@ const CourseCard: FC<Props> = ({ item, isProfile }) => {
                 </span>
               )}
             </div>
-            <MdOutlineSchool
-              size={24}
+            <FiShare2
+              size={18}
               className="text-gray-700 dark:text-gray-300"
             />
           </div>

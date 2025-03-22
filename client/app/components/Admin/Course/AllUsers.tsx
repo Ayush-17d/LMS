@@ -6,7 +6,7 @@ import { useTheme } from "next-themes";
 import Loader from "../../Loader/Loader";
 import { useGetAllUsersQuery } from "@/redux/features/user/userApi";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
-import { useSocket } from "@/context/SocketProvider"; // ✅ Import Socket Context
+import { useSocket } from "@/context/SocketProvider"; 
 import Header from "../Header";
 
 type Props = {
@@ -16,7 +16,7 @@ type Props = {
 const AllUsers: FC<Props> = ({ isTeam }) => {
   const { theme } = useTheme();
   const { isLoading, data } = useGetAllUsersQuery({});
-  const { newUser } = useSocket(); // ✅ Get real-time new users
+  const { newUser } = useSocket();
   const [active, setActive] = useState(false);
 
   const columns = [
@@ -60,9 +60,9 @@ const AllUsers: FC<Props> = ({ isTeam }) => {
   ];
 
   // ✅ Combine API users and real-time users
-  let usersList = [...(data?.users || []), ...newUser];
+  const usersList = [...(data?.users || []), ...newUser];
 
-  let rows: any = usersList
+  const rows: any = usersList
     .filter((item: any) => (isTeam ? item.role === "admin" : item.role !== "admin"))
     .map((item: any) => ({
       id: item._id,
@@ -77,7 +77,7 @@ const AllUsers: FC<Props> = ({ isTeam }) => {
     <div className="w-full  flex min-h-screen dark:bg-[#151632] ">
   
     {/* Main Content */}
-    <div className="w-[80%]">
+    <div className="w-[90%]">
   
     <Header title="All Users" subtitle="Welcome to dashboard"/>
         
@@ -86,13 +86,13 @@ const AllUsers: FC<Props> = ({ isTeam }) => {
         <Loader />
       ) : (
         <Box sx={{ display: "flex", flexDirection: "column" }}>
-          <h1 className="text-2xl font-bold text-[#003366] mb-4">
+          <h1 className="text-2xl -mt-10 font-bold text-[#003366] mb-4">
             {isTeam ? "Admins" : "Users"}
           </h1>
           {isTeam && (
             <div className="w-full flex justify-end">
               <button
-                className="mb-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition-all duration-300 !w-[170px] flex items-center justify-center"
+                className="mb-4 -mt-10 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition-all duration-300 !w-[170px] flex items-center justify-center"
                 onClick={() => setActive(!active)}
               >
                 Add New Member
