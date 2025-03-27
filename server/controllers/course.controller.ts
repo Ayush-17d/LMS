@@ -48,6 +48,9 @@ interface VideoData {
   videoLength: number;
   [key: string]: any;
 }
+
+//edit course
+
 export const editCourse = CatchAsyncError(
   async (req: Request, res: Response, next: NextFunction) => {
     try {
@@ -105,6 +108,8 @@ export const editCourse = CatchAsyncError(
     }
   }
 );
+
+//get single course
 
 export const getSingleCourse = CatchAsyncError(
   async (req: Request, res: Response, next: NextFunction) => {
@@ -572,6 +577,47 @@ export const deleteCourse = CatchAsyncError(
       return next(
         new ErrorHandler(error.message || "Failed to delete course", 500)
       );
+    }
+  }
+);
+
+// Search courses by title
+export const searchCourses = CatchAsyncError(
+  async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const { title } = req.query; // Query param from frontend remains 'title'
+      console.log("Received search title:", title);
+      if (!title || typeof title !== "string") {
+        return next(new ErrorHandler("Title query parameter is required", 400));
+      }
+      const cacheKey = `search:courses:${title.toLowerCase()}`;
+      const cachedCourses = await redis.get(cacheKey);
+      if (cachedCourses) {
+        const courses = JSON.parse(cachedCourses);
+        console.log("Returning cached courses:", courses);
+        return res.status(200).json({ success: true, courses });
+      }
+      console.log("Querying DB with name:", title);
+      const courses = await CourseModel.find({
+        name: { $regex: title, $options: "i" }, // Changed 'title' to 'name'
+      })
+        .select("-courseData.videoUrl -courseData.suggestion -courseData.questions -courseData.links")
+        .populate({ path: "publisher", model: "user", select: "name email avatar" });
+      console.log("Database query result:", courses);
+      if (!courses || courses.length === 0) {
+        console.log("No courses found for name:", title);
+        return res.status(200).json({
+          success: true,
+          courses: [],
+          message: "No courses found matching the search query",
+        });
+      }
+      await redis.set(cacheKey, JSON.stringify(courses), "EX", 3600);
+      console.log("Caching courses:", courses);
+      res.status(200).json({ success: true, courses });
+    } catch (error: any) {
+      console.error("Search Error:", error);
+      return next(new ErrorHandler(error.message, 500));
     }
   }
 );

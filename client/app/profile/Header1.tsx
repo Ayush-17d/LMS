@@ -199,7 +199,7 @@ const Header: FC<Props> = ({ activeItem, setOpen }) => {
             <div className="relative">
               <Link
                 href={"/"}
-                className="text-[25px] hidden 800px:block font-mono font-[600] text-gray-900 dark:text-white hover:text-[#37a39a] transition-colors duration-200"
+                className="text-[25px] hidden 800px:block font-josefin font-[600] text-gray-900 dark:text-white transition-colors duration-300"
               >
                 LearnifyHub
                 <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#37a39a] transition-all duration-300 group-hover:w-full"></span>

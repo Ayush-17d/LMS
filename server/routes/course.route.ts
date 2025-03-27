@@ -1,5 +1,5 @@
 import express from 'express'
-import { editCourse, uploadCourse,getSingleCourse,getEnrolledCourse, getAllCourses, getCourseByUser, addQuestion, addAnswer, addReview, addReplyToReview, getAllCoursesForAdmin, deleteCourse, generateVideoUrl } from '../controllers/course.controller'
+import { editCourse, uploadCourse,getSingleCourse,getEnrolledCourse, getAllCourses, getCourseByUser, addQuestion, addAnswer, addReview, addReplyToReview, getAllCoursesForAdmin, deleteCourse, generateVideoUrl,searchCourses } from '../controllers/course.controller'
 import { authorizeRoles, isAuthenticated } from '../middleware/auth'
 import { updateAccessToken } from '../controllers/user.controllers'
 const courseRouter = express.Router()
@@ -18,5 +18,6 @@ courseRouter.put('/add-reply/:id',isAuthenticated,authorizeRoles("admin"),addRep
 courseRouter.get('/get-all-courses',isAuthenticated,authorizeRoles("admin"),getAllCoursesForAdmin)
 courseRouter.post('/getVdoCipherOTP',generateVideoUrl)
 courseRouter.delete('/delete-course/:id',isAuthenticated,authorizeRoles("admin"),deleteCourse)
-
+courseRouter.delete('/delete-course/:id',isAuthenticated,authorizeRoles("admin"),deleteCourse)
+courseRouter.get("/search-courses", searchCourses);
 export default courseRouter

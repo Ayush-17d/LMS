@@ -40,6 +40,11 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { BiMoon, BiSun } from "react-icons/bi";
+import { FaRegMoon } from "react-icons/fa6";
+import { BsMoon } from "react-icons/bs";
+import { GiUbisoftSun } from "react-icons/gi";
+import { IoPartlySunnyOutline } from "react-icons/io5";
+import { GoSun } from "react-icons/go";
 
 export const ThemeSwitcher = () => {
   const [mounted, setMounted] = useState(false);
@@ -53,13 +58,13 @@ export const ThemeSwitcher = () => {
 
   return (
     <button
-      className="flex items-center px-4 py-2 border text-white rounded-md hover:bg-white/10 transition-colors backdrop-blur-sm"
+      className="flex items-center px-4 py-2 border border-black dark:border-white text-black dark:text-white rounded-md hover:bg-white/10 transition-colors backdrop-blur-sm"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
       {theme === "light" ? (
-        <BiMoon size={22} className="text-white" />
+        <BsMoon   size={22} className="text-black " />
       ) : (
-        <BiSun size={22} className="text-white" />
+        <GoSun    size={22} className="text-white" />
       )}
     </button>
   );

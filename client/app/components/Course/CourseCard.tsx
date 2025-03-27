@@ -107,7 +107,6 @@ type Props = {
 };
 
 const CourseCard: FC<Props> = ({ item, isProfile }) => {
-  //console.log(item)
   return (
     <Link
       href={!isProfile ? `/course/${item._id}` : `course-access/${item._id}`}
@@ -174,6 +173,7 @@ const CourseCard: FC<Props> = ({ item, isProfile }) => {
           
           <div className="flex items-center justify-between">
             <Ratings rating={item.rating} />
+
             <span className={`text-sm text-gray-600 dark:text-gray-400 ${isProfile ? "hidden sm:inline" : ""}`}>
               {item.purchased} Students
             </span>
