@@ -2,7 +2,7 @@
 import React, { FC, useState } from "react";
 import Heading from "@/app/utils/Heading";
 import Header from "../profile/Header1";
-
+import Footer from "../components/Footer";
 import FAQ from "../components/Faq/faq";
 type Props = {};
 
@@ -26,6 +26,7 @@ const Page: FC<Props> = () => {
           route={route}
         />
         <FAQ/>
+        <Footer/>
     </div>
   );
 };

@@ -79,7 +79,7 @@ const Courses = () => {
   }, [data]);
 
   return (
-    <div className="bg-[#DDE6ED] dark:bg-[#27374D] min-h-screen py-1">
+    <div className="bg-[#white] dark:bg-gray-800 min-h-screen py-1">
       <div className="w-[90%] 800px:w-[80%] mx-auto">
         {/* Header */}
         <h1 className="text-center font-Poppins text-[25px] leading-[35px] sm:text-3xl lg:text-4xl dark:text-white text-black 800px:!leading-[60px] font-[700] tracking-tight">

@@ -49,6 +49,7 @@ const NavItems: React.FC<Props> = ({
     setOpenSidebar(!openSidebar);
     setOpen(true);
   };
+  
   const logOutHandler = async () => {
     await signOut({ redirect: false });
     setLogout(true);
@@ -62,17 +63,17 @@ const NavItems: React.FC<Props> = ({
           {NavItemsData.map((i, index) => (
             <Link href={i.url} key={index} passHref>
               <span
-                className={`group relative flex items-center transition-all cursor-pointer text-[18px] font-Poppins font-[400] ${
+                className={`group relative flex items-center transition-all cursor-pointer text-[18px] font-josefin font-[400] ${
                   activeItem === index
                     ? "text-red-600 dark:text-green-400"
                     : "text-black dark:text-white"
                 }`}
               >
-                <span className="relative group-hover:text-[#4CBB17]">
+                <span className="relative group-hover:text-[#3b5d8e]">
                   <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 mr-1">
                     [
                   </span>
-                  <span className="group-hover:text-[#2bd576] transition-all duration-300">
+                  <span className="group-hover:text-[#3b5d8e] active:text-[#3b5d8e] transition-all duration-300">
                     {i.name}
                   </span>
                   <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 ml-1">
@@ -139,7 +140,7 @@ const NavItems: React.FC<Props> = ({
                   alt="Profile Picture"
                   height={4000}
                   width={3000}
-                  className="w-[50] h-[50] cursor-pointer border-[2px] border-[#37a39a] rounded-full object-cover"
+                  className="w-[50] h-[50] cursor-pointer border-[2px] rounded-full object-cover"
                 />
                 <div className="flex flex-col">
                   <span className="font-semibold text-gray-800 dark:text-gray-200">
@@ -225,13 +226,13 @@ const NavItems: React.FC<Props> = ({
                   activeItem === 4
                     ? "dark:text-[#37a39a] text-[crimson]"
                     : "dark:text-white text-black"
-                } flex items-center p-2 rounded-lg group text-center text-[20px] px-6 font-Poppins font-[100] mb-4`}
+                } flex items-center p-2 rounded-lg group text-center text-[20px] px-6 font-josefin font-[100] mb-4`}
               >
                 <AiFillHome
-                  className="mr-3 group-hover:text-[#4CBB17]"
+                  className="mr-3 group-hover:text-[#3b5d8e]"
                   size={20}
                 />
-                <span className="relative group-hover:text-[#4CBB17]">
+                <span className="relative group-hover:text-[#3b5d8e]">
                   <span className="absolute -left-2 group-hover:opacity-100 opacity-0 transition-all duration-300 mr-2">
                     [{" "}
                   </span>
@@ -249,13 +250,13 @@ const NavItems: React.FC<Props> = ({
                   activeItem === 4
                     ? "dark:text-[#2bd576] text-[crimson]"
                     : "dark:text-white text-black"
-                } flex items-center p-2 rounded-lg group text-center text-[20px] px-6 font-Poppins font-[100] mb-4`}
+                } flex items-center p-2 rounded-lg group text-center text-[20px] px-6 font-josefin font-[100] mb-4`}
               >
                 <FaInfoCircle
-                  className="mr-3 group-hover:text-[#4CBB17]"
+                  className="mr-3 group-hover:text-[#3b5d8e]"
                   size={20}
                 />
-                <span className="relative group-hover:text-[#4CBB17]">
+                <span className="relative group-hover:text-[#3b5d8e]">
                   <span className="absolute -left-2 group-hover:opacity-100 opacity-0 transition-all duration-300 mr-2">
                     [{" "}
                   </span>
@@ -273,13 +274,13 @@ const NavItems: React.FC<Props> = ({
                   activeItem === 4
                     ? "dark:text-[#2bd576] text-[crimson]"
                     : "dark:text-white text-black"
-                } flex items-center p-2 rounded-lg group text-center text-[20px] px-6 font-Poppins font-[100] mb-4`}
+                } flex items-center p-2 rounded-lg group text-center text-[20px] px-6 font-josefin font-[100] mb-4`}
               >
                 <MdGavel
-                  className="mr-3 group-hover:text-[#4CBB17]"
+                  className="mr-3 group-hover:text-[#3b5d8e]"
                   size={20}
                 />
-                <span className="relative group-hover:text-[#4CBB17]">
+                <span className="relative group-hover:text-[#3b5d8e]">
                   <span className="absolute -left-2 group-hover:opacity-100 opacity-0 transition-all duration-300 mr-2">
                     [{" "}
                   </span>
@@ -297,13 +298,13 @@ const NavItems: React.FC<Props> = ({
                   activeItem === 4
                     ? "dark:text-[#2bd576] text-[crimson]"
                     : "dark:text-white text-black"
-                } flex items-center p-2 rounded-lg group text-center text-[20px] px-6 font-Poppins font-[100] mb-4`}
+                } flex items-center p-2 rounded-lg group text-center text-[20px] px-6 font-josefin font-[100] mb-4`}
               >
                 <MdLiveHelp
-                  className="mr-3 group-hover:text-[#4CBB17]"
+                  className="mr-3 group-hover:text-[#3b5d8e]"
                   size={20}
                 />
-                <span className="relative group-hover:text-[#4CBB17]">
+                <span className="relative group-hover:text-[#3b5d8e]">
                   <span className="absolute -left-2 group-hover:opacity-100 opacity-0 transition-all duration-300 mr-2">
                     [{" "}
                   </span>
@@ -320,7 +321,7 @@ const NavItems: React.FC<Props> = ({
           <div className="flex 800px:hidden mt-7 flex-col items-start">
             <div className="w-full text-center py-6">
               <Link href={"/"} passHref>
-                <span className="text-[25px] font-Poppins font-[500] text-black dark:text-white">
+                <span className="text-[25px] font-josefin font-[500] text-black dark:text-white">
                   LearnifyHub
                 </span>
               </Link>
@@ -332,13 +333,13 @@ const NavItems: React.FC<Props> = ({
                   activeItem === 4
                     ? "dark:text-[#37a39a] text-[crimson]"
                     : "dark:text-white text-black"
-                } flex items-center p-2 rounded-lg group text-center text-[20px] px-6 font-Poppins font-[100] mb-4`}
+                } flex items-center p-2 rounded-lg group text-center text-[20px] px-6 font-josefin font-[100] mb-4`}
               >
                 <AiFillHome
-                  className="mr-3 group-hover:text-[#4CBB17]"
+                  className="mr-3 group-hover:text-[#3b5d8e]"
                   size={20}
                 />
-                <span className="relative group-hover:text-[#4CBB17]">
+                <span className="relative group-hover:text-[#3b5d8e]">
                   <span className="absolute -left-2 group-hover:opacity-100 opacity-0 transition-all duration-300 mr-2">
                     [{" "}
                   </span>
@@ -356,10 +357,10 @@ const NavItems: React.FC<Props> = ({
                   activeItem === 1
                     ? "dark:text-[#2bd576] text-[crimson]"
                     : "dark:text-white text-black"
-                } flex items-center p-2 rounded-lg group text-center text-[20px] px-6 font-Poppins font-[100] mb-4 cursor-pointer`}
+                } flex items-center p-2 rounded-lg group text-center text-[20px] px-6 font-josefin font-[100] mb-4 cursor-pointer`}
               >
-                <MdGroupAdd className="mr-3 group-hover:text-[#4CBB17] " />
-                <span className="relative group-hover:text-[#4CBB17]">
+                <MdGroupAdd className="mr-3 group-hover:text-[#3b5d8e] " />
+                <span className="relative group-hover:text-[#3b5d8e]">
                   <span className="absolute -left-2 group-hover:opacity-100 opacity-0 transition-all duration-300 mr-2">
                     [{" "}
                   </span>
@@ -377,13 +378,13 @@ const NavItems: React.FC<Props> = ({
                   activeItem === 4
                     ? "dark:text-[#2bd576] text-[crimson]"
                     : "dark:text-white text-black"
-                } flex items-center p-2 rounded-lg group text-center text-[20px] px-6 font-Poppins font-[100] mb-4`}
+                } flex items-center p-2 rounded-lg group text-center text-[20px] px-6 font-josefin font-[100] mb-4`}
               >
                 <FaInfoCircle
-                  className="mr-3 group-hover:text-[#4CBB17]"
+                  className="mr-3 group-hover:text-[#3b5d8e]"
                   size={20}
                 />
-                <span className="relative group-hover:text-[#4CBB17]">
+                <span className="relative group-hover:text-[#3b5d8e]">
                   <span className="absolute -left-2 group-hover:opacity-100 opacity-0 transition-all duration-300 mr-2">
                     [{" "}
                   </span>
@@ -401,13 +402,13 @@ const NavItems: React.FC<Props> = ({
                   activeItem === 4
                     ? "dark:text-[#2bd576] text-[crimson]"
                     : "dark:text-white text-black"
-                } flex items-center p-2 rounded-lg group text-center text-[20px] px-6 font-Poppins font-[100] mb-4`}
+                } flex items-center p-2 rounded-lg group text-center text-[20px] px-6 font-josefin font-[100] mb-4`}
               >
                 <MdGavel
-                  className="mr-3 group-hover:text-[#4CBB17]"
+                  className="mr-3 group-hover:text-[#3b5d8e]"
                   size={20}
                 />
-                <span className="relative group-hover:text-[#4CBB17]">
+                <span className="relative group-hover:text-[#3b5d8e]">
                   <span className="absolute -left-2 group-hover:opacity-100 opacity-0 transition-all duration-300 mr-2">
                     [{" "}
                   </span>
@@ -425,13 +426,13 @@ const NavItems: React.FC<Props> = ({
                   activeItem === 4
                     ? "dark:text-[#2bd576] text-[crimson]"
                     : "dark:text-white text-black"
-                } flex items-center p-2 rounded-lg group text-center text-[20px] px-6 font-Poppins font-[100] mb-4`}
+                } flex items-center p-2 rounded-lg group text-center text-[20px] px-6 font-josefin font-[100] mb-4`}
               >
                 <MdLiveHelp
-                  className="mr-3 group-hover:text-[#4CBB17]"
+                  className="mr-3 group-hover:text-[#3b5d8e]"
                   size={20}
                 />
-                <span className="relative group-hover:text-[#4CBB17]">
+                <span className="relative group-hover:text-[#3b5d8e]">
                   <span className="absolute -left-2 group-hover:opacity-100 opacity-0 transition-all duration-300 mr-2">
                     [{" "}
                   </span>
