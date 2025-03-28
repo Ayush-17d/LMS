@@ -112,7 +112,7 @@ const CourseCard: FC<Props> = ({ item, isProfile }) => {
       href={!isProfile ? `/course/${item._id}` : `course-access/${item._id}`}
     >
       <motion.div
-        className="w-full min-h-[40vh] bg-white dark:bg-slate-900 rounded-2xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-[1.03] border border-gray-100 dark:border-gray-800"
+        className="w-full min-h-[40vh] bg-white dark:bg-slate-900 rounded-2xl shadow-lg overflow-hidden transform transition duration-300  border border-gray-100 dark:border-gray-800"
       >
         {/* Thumbnail Section */}
         <div className="relative h-64">

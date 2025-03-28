@@ -58,6 +58,7 @@ const About = (props: Props) => {
     },
   };
 
+
   return (
     <div className="min-h-screen bg-[#FAF9F6] dark:bg-[#383838] text-gray-800 dark:text-gray-200 overflow-x-hidden">
       {/* Hero Section */}
