@@ -91,7 +91,7 @@ const Page: FC<Props> = (props) => {
           /> */}
           <Hero />
           <Courses />
-          {/* <Teachers/> */}
+          <Teachers/>
           {/* <Comparison/> */}
           {/* <Chatbot/> */}
           {/* <Reviews /> */}

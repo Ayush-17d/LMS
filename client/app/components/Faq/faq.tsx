@@ -68,7 +68,7 @@ const FAQSection = ({ items }: { items: FAQItem[] }) => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={index % 2 === 0 ? fadeInLeft : fadeInRight}
+          variants={fadeInLeft}
           className="bg-white dark:bg-[#2A2A2A] rounded-lg shadow-lg border border-gray-100 dark:border-gray-700 transition-all duration-300"
         >
           <button
@@ -119,6 +119,7 @@ const fadeInUp = {
     transition: { duration: 1, ease: [0.6, -0.05, 0.01, 0.99] },
   },
 };
+
 const fadeInLeft = {
   hidden: { opacity: 0, x: -80 },
   visible: {
@@ -127,6 +128,7 @@ const fadeInLeft = {
     transition: { duration: 1, ease: [0.6, -0.05, 0.01, 0.99] },
   },
 };
+
 const fadeInRight = {
   hidden: { opacity: 0, x: 80 },
   visible: {
@@ -135,10 +137,12 @@ const fadeInRight = {
     transition: { duration: 1, ease: [0.6, -0.05, 0.01, 0.99] },
   },
 };
+
 const staggerChildren = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { staggerChildren: 0.25 } },
 };
+
 const scaleIn = {
   hidden: { opacity: 0, scale: 0.8 },
   visible: {

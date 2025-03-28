@@ -34,7 +34,7 @@ const Footer: React.FC<Props> = () => {
             <ul className="text-sm transition-all duration-500">
               <li className="mb-6">
                 <Link
-                  href="/our-story"
+                  href="/about"
                   className="text-gray-600 dark:text-gray-400 hover:text-indigo-500 dark:hover:text-indigo-400"
                 >
                   Our Story
@@ -42,7 +42,7 @@ const Footer: React.FC<Props> = () => {
               </li>
               <li className="mb-6">
                 <Link
-                  href="/privacy-policy"
+                  href="/policy"
                   className="text-gray-600 dark:text-gray-400 hover:text-indigo-500 dark:hover:text-indigo-400"
                 >
                   Privacy Policy
@@ -102,7 +102,7 @@ const Footer: React.FC<Props> = () => {
               <p className="mb-4">Phone: +1 (123) 456-7890</p>
               <a
                 href="mailto:learnifyhubplatform@gmail.com?subject=Query%20About%20Learnify%20LMS&body=Hello%20Learnify%20Team,%0D%0A%0D%0AI%20have%20a%20question%20about%20your%20LMS%20platform.%20Could%20you%20please%20assist%20me%20with%20[insert%20your%20query%20here]?%0D%0A%0D%0AThanks,%0D%0A[Your%20Name]"
-                className="inline-block py-2.5 px-5 bg-indigo-500 dark:bg-indigo-600 rounded-full text-xs text-white transition-all duration-500 hover:bg-indigo-600 dark:hover:bg-indigo-700"
+                className="inline-block py-2.5 px-5 bg-blue-500 dark:bg-blue-600 rounded-full text-xs text-white transition-all duration-500 hover:bg-blue-600 dark:hover:bg-blue-700"
               >
                 Get in touch
               </a>
@@ -136,7 +136,7 @@ const Footer: React.FC<Props> = () => {
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-9 h-9 rounded-full bg-gray-600 dark:bg-gray-700 flex justify-center items-center hover:bg-[#FCAF45] dark:hover:bg-pink-600 transition-colors duration-300"
+              className="w-9 h-9 rounded-full bg-gray-600 dark:bg-gray-700 flex justify-center items-center hover:hover:bg-pink-600 dark:hover:bg-pink-600 transition-colors duration-300"
             >
               <Instagram className="text-white" />
             </a>

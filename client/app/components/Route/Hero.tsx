@@ -3141,7 +3141,7 @@ import React, { FC, useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { useSelector } from "react-redux";
 import Image from "next/image";
-import { FaSearch, FaBook } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
@@ -3202,11 +3202,6 @@ const videoContent = [
     src: "/assests/7.mp4",
     title: "Upskill for Tomorrow",
     subtitle: "Stay Ahead in a Changing World",
-  },
-  {
-    src: "/assests/8.mp4",
-    title: "Start Your Learning Adventure",
-    subtitle: "Step Into a Future Full of Opportunities",
   },
 ];
 
@@ -3272,7 +3267,6 @@ const Hero: FC<Props> = ({ activeItem = 0 }) => {
     }
   }, [currentVideoIndex]);
 
-  // Rest of the existing useEffects (social auth, scroll, resize)
   useEffect(() => {
     if (!user && data) {
       socialAuth({

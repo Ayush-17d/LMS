@@ -90,9 +90,9 @@ const Policy = (props: Props) => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#F5F7FA] dark:bg-[#1F2937] text-gray-800 dark:text-gray-200 overflow-x-hidden">
+    <div className="min-h-screen bg-[#FAF9F6] dark:bg-[#383838] text-gray-800 dark:text-gray-200 overflow-x-hidden">
       {/* Hero Section (No Background Image, Skew Design) */}
-      <section className="relative bg-[#F5F7FA] dark:bg-[#1F2937] py-20 md:py-32 border-b border-gray-200 dark:border-gray-700 overflow-x-hidden">
+      <section className="relative bg-[#FAF9F6] dark:bg-[#383838] py-20 md:py-32 border-b border-gray-200 dark:border-gray-700 overflow-x-hidden">
         <div className="absolute inset-0 opacity-10 dark:opacity-20 pointer-events-none">
           <div className="absolute inset-y-0 left-0 w-[33%] bg-gray-200 dark:bg-gray-700 transform -skew-x-12 origin-left"></div>
           <div className="absolute inset-y-0 right-0 w-[33%] bg-gray-200 dark:bg-gray-700 transform skew-x-12 origin-right"></div>
@@ -131,7 +131,7 @@ const Policy = (props: Props) => {
       </section>
 
       {/* Policies Overview */}
-      <section id="policies" className="py-16 md:py-24 bg-[#F5F7FA] dark:bg-[#1F2937]">
+      <section id="policies" className="py-16 md:py-24 bg-[#FAF9F6] dark:bg-[#383838]">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <motion.div
             initial="hidden"
@@ -156,7 +156,7 @@ const Policy = (props: Props) => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                variants={index % 2 === 0 ? fadeInLeft : fadeInRight}
+                variants={fadeInUp}
                 className="bg-white dark:bg-[#2A2A2A] rounded-xl shadow-md p-6 hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700"
               >
                 <div className="flex items-center mb-4">
@@ -240,7 +240,7 @@ const Policy = (props: Props) => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 md:py-24 bg-[#F5F7FA] dark:bg-[#1F2937]">
+      <section className="py-16 md:py-24 bg-[#FAF9F6] dark:bg-[#383838]">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <motion.div
             initial="hidden"
